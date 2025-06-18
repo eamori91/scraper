@@ -1,0 +1,55 @@
+{
+ "doctype": "DocType",
+ "name": "Scrape Result",
+ "module": "scraper",
+ "custom": 0,
+ "fields": [
+  {
+   "fieldname": "scrape_job",
+   "fieldtype": "Link",
+   "label": "Scrape Job",
+   "options": "Scrape Job",
+   "reqd": 1
+  },
+  {
+   "fieldname": "raw_json",
+   "fieldtype": "Long Text",
+   "label": "Raw JSON"
+  },
+  {
+   "fieldname": "text_clean",
+   "fieldtype": "Text",
+   "label": "Cleaned Text"
+  },
+  {
+   "fieldname": "language",
+   "fieldtype": "Data",
+   "label": "Language"
+  },
+  {
+   "fieldname": "datetime_scraped",
+   "fieldtype": "Datetime",
+   "label": "Datetime Scraped"
+  }
+ ],
+ "autoname": "field:name",
+ "permissions": [
+  {
+   "role": "Scraping Admin",
+   "read": 1,
+   "write": 1,
+   "create": 1,
+   "delete": 1
+  },
+  {
+   "role": "Data Analyst",
+   "read": 1,
+   "write": 1,
+   "create": 1
+  },
+  {
+   "role": "Viewer",
+   "read": 1
+  }
+ ]
+}

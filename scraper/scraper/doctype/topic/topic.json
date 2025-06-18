@@ -1,0 +1,39 @@
+{
+ "doctype": "DocType",
+ "name": "Topic",
+ "module": "scraper",
+ "istable": 1,
+ "custom": 0,
+ "fields": [
+  {
+   "fieldname": "topic",
+   "fieldtype": "Data",
+   "label": "Topic"
+  },
+  {
+   "fieldname": "score",
+   "fieldtype": "Float",
+   "label": "Score"
+  }
+ ],
+ "autoname": "field:name",
+ "permissions": [
+  {
+   "role": "Scraping Admin",
+   "read": 1,
+   "write": 1,
+   "create": 1,
+   "delete": 1
+  },
+  {
+   "role": "Data Analyst",
+   "read": 1,
+   "write": 1,
+   "create": 1
+  },
+  {
+   "role": "Viewer",
+   "read": 1
+  }
+ ]
+}
