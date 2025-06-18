@@ -1,0 +1,57 @@
+{
+ "doctype": "DocType",
+ "name": "Analysis",
+ "module": "scraper",
+ "custom": 0,
+ "fields": [
+  {
+   "fieldname": "scrape_job",
+   "fieldtype": "Link",
+   "label": "Scrape Job",
+   "options": "Scrape Job",
+   "reqd": 1
+  },
+  {
+   "fieldname": "kv_metrics",
+   "fieldtype": "Code",
+   "label": "Metrics (JSON)",
+   "options": "JSON"
+  },
+  {
+   "fieldname": "sentiment_score",
+   "fieldtype": "Float",
+   "label": "Sentiment Score"
+  },
+  {
+   "fieldname": "topics",
+   "fieldtype": "Table",
+   "label": "Topics",
+   "options": "Topic"
+  },
+  {
+   "fieldname": "graph_url",
+   "fieldtype": "Data",
+   "label": "Graph URL"
+  }
+ ],
+ "autoname": "field:name",
+ "permissions": [
+  {
+   "role": "Scraping Admin",
+   "read": 1,
+   "write": 1,
+   "create": 1,
+   "delete": 1
+  },
+  {
+   "role": "Data Analyst",
+   "read": 1,
+   "write": 1,
+   "create": 1
+  },
+  {
+   "role": "Viewer",
+   "read": 1
+  }
+ ]
+}

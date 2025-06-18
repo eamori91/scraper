@@ -1,0 +1,57 @@
+{
+ "doctype": "DocType",
+ "name": "Scrape Job",
+ "module": "scraper",
+ "custom": 0,
+ "fields": [
+  {
+   "fieldname": "status",
+   "fieldtype": "Select",
+   "label": "Status",
+   "options": "Draft\nQueued\nSuccess\nError",
+   "reqd": 1
+  },
+  {
+   "fieldname": "target_type",
+   "fieldtype": "Select",
+   "label": "Target Type",
+   "options": "web\ntwitter",
+   "reqd": 1
+  },
+  {
+   "fieldname": "query",
+   "fieldtype": "Data",
+   "label": "Query/Keyword"
+  },
+  {
+   "fieldname": "url",
+   "fieldtype": "Data",
+   "label": "URL"
+  },
+  {
+   "fieldname": "frequency_cron",
+   "fieldtype": "Data",
+   "label": "Frequency (Cron)"
+  }
+ ],
+ "autoname": "field:name",
+ "permissions": [
+  {
+   "role": "Scraping Admin",
+   "read": 1,
+   "write": 1,
+   "create": 1,
+   "delete": 1
+  },
+  {
+   "role": "Data Analyst",
+   "read": 1,
+   "write": 1,
+   "create": 1
+  },
+  {
+   "role": "Viewer",
+   "read": 1
+  }
+ ]
+}
